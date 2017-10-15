@@ -1,0 +1,542 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section 
+  display: block
+
+body 
+  line-height: 1
+
+ol, ul 
+  list-style: none
+
+blockquote, q 
+  quotes: none
+
+blockquote 
+  &:before, &:after 
+    content: ''
+    content: none
+
+q 
+  &:before, &:after 
+    content: ''
+    content: none
+
+table 
+  border-collapse: collapse
+  border-spacing: 0
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+.h1, .h2, .h3, .h4, .h4, .h6
+	line-height: 1.4
+	text-transform: uppercase
+
+@mixin opacity($opacity)
+	opacity: $opacity / 100
+	filter: alpha(opacity=$opacity)
+
+
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	z-index: 100
+	background-color: $dark
+	.pulse
+		position: relative
+		left: 50%
+		top: 50vh
+		margin: 
+			left: -40px
+			top: -40px
+		&::before,&::after
+			content: ''
+			border: 5px solid #323232
+			width: 80px
+			height: 80px
+			border-radius: 500px
+			position: absolute
+		&::before
+			animation: pulse-outer .8s ease-in infinite
+		&::after
+			animation: pulse-inner .8s linear infinite
+@keyframes polse-outer
+	0%
+		@include opacity(100)
+	50%
+		@include opacity(50)
+	100%
+		@include opacity(0)
+@keyframes pulse-inner
+	0%
+		@include opacity(0)
+		transform: scale(0)
+	100%
+		@include opacity(100)
+		transform: scale(1)
+#my-content
+	position: relative
+
+
+	
+
+.nav
+	position: fixed
+	margin: 0
+	padding: 0
+	width: 100%
+	height: 100px
+	z-index: 20
+	background-color: #fff
+	.left-menu, .right-menu, .logo
+		display: inline-block
+		width: 30%
+		float: left
+
+
+.left-menu
+	padding-left: 10%
+	padding-top: 2.5%
+
+.right-menu
+	padding-top: 2.5%
+	padding-left: 10%
+
+.logo
+	margin-top: 1.5%
+	padding-left: 7%
+	text-align: center
+
+.center-menu
+	text-align: center
+	p
+		position: absolute
+		margin-top: 4.5%
+		margin-left: 46.6%
+		color: $blue
+		font-family: "Champagne_LimousinesBold"
+		font-size: 18px
+
+.menu-1
+	font-family: "OpenSans-SemiBold"
+	font-size: 16px
+
+.menu-1 ul
+	margin: 0 
+  padding: 4px
+
+.menu-1 li 
+  display: inline 
+  padding: 3px 
+	
+
+.site-header 
+	color: #fff
+	height: 710px
+	background-size: cover
+	background-position: center
+	background-blend-mode: darken, luminosity
+	background-color: $blue 
+	h1
+		color: #fff
+		position: relative
+		margin-top: -270px
+		margin-left: 300px
+		width: 200%
+		font-family: "OpenSans-Bold"
+		font-size: 40px
+		text-transform: uppercase
+	h2
+		color: #fff
+		margin-left: 300px
+		width: 200%
+		font-size: 28px
+		font-family: "Freestyle Script"
+
+.forms
+	position: absolute
+	margin-top: 200px
+	margin-left: 20%
+	height: 390px
+	width: 250px
+	background-color: #fff
+	border-radius: 15px
+	color: #222
+	p
+		padding-top: 40px
+		padding-left: 4%
+		color: $blue
+		font-size: 28px
+		font-family: "OpenSans-SemiBold"
+
+.form-field
+	padding-top: 5%	
+	padding-left: 3%
+
+#contactName ,#contactEmail ,.select-type2
+	border-radius: 8px
+	height: 50px
+	width: 230px
+	padding-left: 10px
+	background-color: #F2F2FF 
+	color: #888888
+
+.submitform
+	background-color: $blue
+	color: #fff
+	width: 165px
+	height: 45px
+	border-radius: 8px
+	margin-left: 60px
+	margin-top: 10px
+
+//next block
+
+.programa 
+	height: 1025px
+
+.program 
+	margin-top: 125px
+	text-align: center
+	h1
+		text-transform: uppercase
+		font-family: "OpenSans-Bold"
+		font-size: 30px
+		color: $blue
+	h2
+		margin-top: 2%
+		font-size: 28px
+		font-family: "Freestyle Script"
+	h3
+		font-size: 20px
+
+.program-img
+	background-size: cover
+	background-position: center
+	margin-top: 75px
+	height: 750px
+	display: inline-block
+	
+
+.left-top, .right-top, .left-bottom, .right-bottom
+	float : left
+	width: 50%
+	margin-top: 10px
+
+
+
+.text1 ,.text2 ,.text3 ,.text4
+	width: 50%
+	float : right
+	text-align: justify
+	p
+		margin-top: 15px
+		margin-left: 25px
+		color: #555
+		font-family: "OpenSans"
+		font-size: 14px
+		
+	h3
+		font-family: "OpenSans-Bold"
+		margin-left: 25px
+		margin-top: 15px
+		color: #777
+		font-size: 20px
+	h4
+		margin-top: 5px
+		margin-left: 25px
+		color: #999
+		font-size: 14px
+
+//next block
+
+.Gallery
+	height: 700px
+	margin: 0
+	padding: 0
+	border : 0
+	background-size: cover
+	background-position: center
+.img
+	margin: 0
+	padding: 0
+	border : 0
+a:hover
+
+
+.wid
+	width: 25%
+
+
+//next block
+
+.about-us
+	height: 550px
+
+
+.about
+	display: flex
+	float: left
+
+.about-text
+	text-align: justify
+	margin-left: 100px
+	h1
+		margin-top: 150px
+		margin-right: 40%
+		font-size: 30px
+		color: $blue
+		font-family: "OpenSans-Bold"
+	p
+		margin-top: 25px
+		margin-right: 40%
+		font-size: 14px
+		font-family: "OpenSans"
+
+.section-gallery
+	margin-top: 125px
+	margin-left: 30px
+	background-size: cover
+	background-position: right
+
+//next block
+
+
+.elements
+	background-color: $blue
+	height: 800px 
+	padding-top: 10%
+	background-size: cover
+	background-position: center
+	background-blend-mode: darken, luminosity
+	background-color: $blue 
+	color: #fff
+
+.img-elements	
+ 	margin-bottom: 5%
+ 	margin-left: 5%
+ 	text-align: center
+ 	display: inline-block
+ 	width: 18%
+ 	img
+ 		border: 5px solid #fff
+ 		padding: 12px
+ 		border-radius: 200px 
+
+.text-elements
+	font-size: 16px
+	h2
+		font-family: "OpenSans-Bold"
+		margin-top: 20px
+		font-size: 18px
+	p
+		font-family: "OpenSans"
+		margin-top: 10px
+		font-size: 10px
+
+
+//next block
+.shop
+	height: 1150px
+	color: #fff	
+	background-image: url(../img/shop.png)
+	background-size: cover
+	background-position: left
+
+.price-left, .price-center, .price-right
+	float: left
+	margin-left: 2%
+	margin-top: 100px
+	background-color: #fff
+	height: 490px
+	width: 370px
+
+.count
+	background-color: $blue
+	height: 150px
+	text-align: center
+	font-family: "OpenSans-Bold"
+	h1
+		font-size: 65px
+		position: absolute
+		margin-left: 125px
+		margin-top: 20px
+	h2
+		font-size: 32px
+		position: absolute
+		margin-left: 100px
+		margin-top: 50px
+	h3
+		font-size: 26px
+		position: absolute
+		margin-left: 190px
+		margin-top: 70px
+		text-transform: uppercase
+
+.description
+	color: #222
+	text-align: center
+	margin-top: 50px	
+	font-size: 18px
+	font-family: "OpenSans-Regular"
+
+.shopin
+	text-align: center
+	width: 170px
+	height: 50px
+	background-color: $blue
+	border-radius: 20px
+	margin-top: 50px
+	font-family: "OpenSans-SemiBold"
+
+.shopin:hover
+	background-color: #5363D8
+	
+.feed-back
+	padding-top: 600px
+
+.reviews
+	text-align: center
+	margin-top: 100px
+	height: 250px
+	background-color: #fff
+	
+
+.review
+	margin-top: 20px
+	&-img
+		display: inline-block
+		margin-right: 900px
+		margin-top: 10px
+		padding: 10px
+	&-header
+		margin-right: 555px
+		margin-top: -40px
+		font-family: 'OpenSans-Regular'
+		font-size: 14px
+		color: #A2A2A2
+	&-name
+		margin-right: 500px
+		font-family: 'OpenSans-Bold'
+		font-size: 16px
+		color: $blue
+	&-text
+		font-family: "OpenSans-Italic"
+		position: absolute
+		margin-top: -140px
+		color: #95989A
+		font-size: 16px
+		margin-left: 25%
+		text-align: center
+		width: 50%
+
+.review
+	img
+		border-radius: 250px 250px 250px 250px
+		padding: 10px	
+		border: 4px solid #D7D7D7
+
+
+//next block
+
+
+.my-footer
+	height: 550px
+
+.left, .center, .right
+	float: left
+	display: inline-block
+	margin-left: 6%
+	margin-top: 10%
+	color: #fff
+
+.left
+	text-align: justify
+	font-size: 14px
+	h1 
+		margin-bottom: 5%
+		font-size: 18px
+		font-family: "OpenSans-Bold"
+	p
+		margin-bottom: 5%
+		font-family: "OpenSans-Regular"
+	img
+		margin-bottom: 10%
+		margin-left: 2%
+
+.center
+	h1
+		text-align: justify
+		margin-bottom: 5%
+	p
+		margin-top: 10%
+		margin-left: 17%
+	img
+		position: absolute
+		margin-top: 2.5%
+
+.right
+	p
+		margin-top: 32%
+		margin-left: 17%
+	img
+		position: absolute
+		margin-top: 4.5%
+
+
+
+
+.footer	
+	background-color: #5363D8
+	position: absolute
+	text-align: center
+	margin-top: 37%
+	height: 100px
+	width: 100%
+	p
+	 margin-top: 45px
+	 color: #fff
+	 font-family: "OpenSans-Regular"
+
+
+
+@import "media" // Всегда в конце
